@@ -1,0 +1,6 @@
+C:\Users\jakes\Documents\vatSys Files\Profiles\Australia\Plugins\vatsys.PBNCapPlugin.dll
+C:\Users\jakes\Documents\vatSys Files\Profiles\Australia\Plugins\vatsys.PBNCapPlugin.pdb
+C:\Users\jakes\Documents\vatSys Project\vatsys.PBNCapPlugin\obj\Release\vatsys.PBNCapPlugin.csprojAssemblyReference.cache
+C:\Users\jakes\Documents\vatSys Project\vatsys.PBNCapPlugin\obj\Release\vatsys.PBNCapPlugin.csproj.CoreCompileInputs.cache
+C:\Users\jakes\Documents\vatSys Project\vatsys.PBNCapPlugin\obj\Release\vatsys.PBNCapPlugin.dll
+C:\Users\jakes\Documents\vatSys Project\vatsys.PBNCapPlugin\obj\Release\vatsys.PBNCapPlugin.pdb

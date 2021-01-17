@@ -53,13 +53,13 @@ namespace vatsys.PBNCapPlugin
         /// Not needed for this plugin. But you could for instance, use the new position of the radar track or its change in state (cancelled, etc.) to do some processing. 
         public void OnRadarTrackUpdate(RDP.RadarTrack updated)
         {
-            
+
         }
 
         /// First we check if the itemType is our custom Label Item, and a flight data record exists (since we need a callsign) 
         /// Then we get the previously calculated character from our dictionary and display it by returning a custom label item.
         /// Note we change the items colour from the default colour if it is a 'Z' char.
-        public CustomLabelItem GetCustomLabelItem(string itemType, FDP2.FDR flightDataRecord, RDP.RadarTrack radarTrack)
+        public CustomLabelItem GetCustomLabelItem(string itemType, Track track, FDP2.FDR flightDataRecord, RDP.RadarTrack radarTrack)
         {
             if (flightDataRecord == null)
                 return null;
@@ -78,5 +78,15 @@ namespace vatsys.PBNCapPlugin
             };
         }
 
+        //Here we can set a custom colour for the track and label. Otherwise return null.
+        public CustomColour SelectASDTrackColour(Track track)
+        {
+            return null;
+        }
+
+        public CustomColour SelectGroundTrackColour(Track track)
+        {
+            return null;
+        }
     }
 }

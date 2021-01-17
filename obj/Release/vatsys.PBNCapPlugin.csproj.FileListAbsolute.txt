@@ -1,3 +1,4 @@
+C:\Users\jakes\Documents\vatSys Files\Profiles\Australia\Plugins\vatsys.PBNCapPlugin.dll.config
 C:\Users\jakes\Documents\vatSys Files\Profiles\Australia\Plugins\vatsys.PBNCapPlugin.dll
 C:\Users\jakes\Documents\vatSys Files\Profiles\Australia\Plugins\vatsys.PBNCapPlugin.pdb
 C:\Users\jakes\Documents\vatSys Project\vatsys.PBNCapPlugin\obj\Release\vatsys.PBNCapPlugin.csprojAssemblyReference.cache

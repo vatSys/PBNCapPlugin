@@ -74,7 +74,9 @@ namespace vatsys.PBNCapPlugin
             {
                 Type = itemType,
                 ForeColourIdentity = val == 'Z' ? Colours.Identities.StaticTools : Colours.Identities.Default,
-                Text = val.ToString()
+                Text = val.ToString(),
+                Border = BorderFlags.Bottom,
+                OnMouseClick = ItemMouseClick
             };
         }
 
@@ -87,6 +89,13 @@ namespace vatsys.PBNCapPlugin
         public CustomColour SelectGroundTrackColour(Track track)
         {
             return null;
+        }
+
+        //Here we can handle a mouse click on our custom label item. Set handled to true if we did something to prevent vatsys processing the click further
+        private void ItemMouseClick(CustomLabelItemMouseClickEventArgs e)
+        {
+            e.Track.IQL = !e.Track.IQL;
+            e.Handled = true;
         }
     }
 }

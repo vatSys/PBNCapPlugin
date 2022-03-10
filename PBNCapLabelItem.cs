@@ -10,10 +10,11 @@ using System.Collections.Concurrent;
 namespace vatsys.PBNCapPlugin
 {
     [Export(typeof(IPlugin))]
-    public class PBNCapLabelItem : IPlugin
+    public class PBNCapLabelItem : IStripPlugin, ILabelPlugin
     {
         /// The name of the custom label item we've added to Labels.xml in the Profile
         const string LABEL_ITEM = "PBN_CAP";
+        const string STRIP_ITEM = "CustomCallsign";
         /// Dictionary to store the value we will retrieve when the label is painted. This avoids re-doing processing of the FDR every time the paint code is called. 
         ConcurrentDictionary<string, char> pbnValues = new ConcurrentDictionary<string, char>();
 
@@ -96,6 +97,22 @@ namespace vatsys.PBNCapPlugin
         {
             e.Track.IQL = !e.Track.IQL;
             e.Handled = true;
+        }
+
+        public CustomStripItem GetCustomStripItem(string itemType, Track track, FDP2.FDR flightDataRecord, RDP.RadarTrack radarTrack)
+        {
+            return new CustomStripItem()
+            {
+                Text = flightDataRecord.Callsign,
+                Border = flightDataRecord.DesAirport == "YPAD" ? BorderFlags.Bottom : BorderFlags.None,
+                ForeColourIdentity = Colours.Identities.State,
+                BorderColourIdentity = Colours.Identities.State,
+            };
+        }
+
+        public void Test()
+        {
+            throw new NotImplementedException();
         }
     }
 }
